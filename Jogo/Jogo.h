@@ -1,7 +1,8 @@
 #ifndef JOGO_H
 #define JOGO_H
 
-#include "Menu.h"
+#include "Jogador.h"
+#include "Mapa.h"
 
 #include <iostream>
 #include <SFML/Audio.hpp>
@@ -15,7 +16,6 @@ class Jogo {
 public:
   Jogo(int largura, int altura, string titulo);
   virtual ~Jogo();
-  bool muda_estado(int estado);
   void run();
 
   static const int MENU = 1;
@@ -23,8 +23,14 @@ public:
   static const int RANKING = 3;
 
 private:
-  int estado_atual;
+  int estado_atual;                                                                    
   RenderWindow window;
+  Jogador *jogador1;
+  Jogador *jogador2;
+  Mapa *mapa;
+  void eventos();
+  void update();
+  void render();
 };
 
 #endif
