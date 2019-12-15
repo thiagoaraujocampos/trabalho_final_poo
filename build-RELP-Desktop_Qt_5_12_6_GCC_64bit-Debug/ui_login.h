@@ -34,6 +34,8 @@ public:
     QLabel *label_3;
     QLineEdit *lineEdit_2;
     QPushButton *btnLogar;
+    QLineEdit *lineEdit;
+    QLineEdit *lineEdit_2;
 
     void setupUi(QDialog *Login)
     {
@@ -54,6 +56,7 @@ public:
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
         label_2 = new QLabel(widget);
         label_2->setObjectName(QString::fromUtf8("label_2"));
+<<<<<<< HEAD
 
         horizontalLayout->addWidget(label_2);
 
@@ -86,6 +89,21 @@ public:
 
         verticalLayout->addWidget(btnLogar);
 
+=======
+        label_2->setGeometry(QRect(60, 140, 58, 16));
+        label_3 = new QLabel(Login);
+        label_3->setObjectName(QString::fromUtf8("label_3"));
+        label_3->setGeometry(QRect(60, 190, 58, 16));
+        btnLogar = new QPushButton(Login);
+        btnLogar->setObjectName(QString::fromUtf8("btnLogar"));
+        btnLogar->setGeometry(QRect(220, 340, 80, 24));
+        lineEdit = new QLineEdit(Login);
+        lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
+        lineEdit->setGeometry(QRect(60, 160, 113, 24));
+        lineEdit_2 = new QLineEdit(Login);
+        lineEdit_2->setObjectName(QString::fromUtf8("lineEdit_2"));
+        lineEdit_2->setGeometry(QRect(60, 210, 113, 24));
+>>>>>>> ac4287af38dd2a589410373d9f83cc6511311cd3
 
         retranslateUi(Login);
 

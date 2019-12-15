@@ -55,19 +55,33 @@ OBJECTS_DIR   = ./
 SOURCES       = ../RELP/integrantes.cpp \
 		../RELP/login.cpp \
 		../RELP/main.cpp \
+<<<<<<< HEAD
 		../RELP/republica.cpp \
 		../RELP/telaprincipal.cpp moc_integrantes.cpp \
 		moc_login.cpp \
 		moc_republica.cpp \
+=======
+		../RELP/membros.cpp \
+		../RELP/telaprincipal.cpp moc_login.cpp \
+		moc_membros.cpp \
+>>>>>>> ac4287af38dd2a589410373d9f83cc6511311cd3
 		moc_telaprincipal.cpp
 OBJECTS       = integrantes.o \
 		login.o \
 		main.o \
+<<<<<<< HEAD
 		republica.o \
+=======
+		membros.o \
+>>>>>>> ac4287af38dd2a589410373d9f83cc6511311cd3
 		telaprincipal.o \
 		moc_integrantes.o \
 		moc_login.o \
+<<<<<<< HEAD
 		moc_republica.o \
+=======
+		moc_membros.o \
+>>>>>>> ac4287af38dd2a589410373d9f83cc6511311cd3
 		moc_telaprincipal.o
 DIST          = ../../../Qt/5.12.6/gcc_64/mkspecs/features/spec_pre.prf \
 		../../../Qt/5.12.6/gcc_64/mkspecs/common/unix.conf \
@@ -244,6 +258,7 @@ DIST          = ../../../Qt/5.12.6/gcc_64/mkspecs/features/spec_pre.prf \
 		../../../Qt/5.12.6/gcc_64/mkspecs/linux-g++/qmake.conf \
 		../../../Qt/5.12.6/gcc_64/mkspecs/features/spec_post.prf \
 		../RELP/.qmake.stash \
+<<<<<<< HEAD
 		../../../Qt/5.12.6/gcc_64/mkspecs/features/exclusive_builds.prf \
 		../../../Qt/5.12.6/gcc_64/mkspecs/features/toolchain.prf \
 		../../../Qt/5.12.6/gcc_64/mkspecs/features/default_pre.prf \
@@ -270,6 +285,32 @@ DIST          = ../../../Qt/5.12.6/gcc_64/mkspecs/features/spec_pre.prf \
 		../RELP/login.cpp \
 		../RELP/main.cpp \
 		../RELP/republica.cpp \
+=======
+		../../../../Qt/5.12.6/gcc_64/mkspecs/features/exclusive_builds.prf \
+		../../../../Qt/5.12.6/gcc_64/mkspecs/features/toolchain.prf \
+		../../../../Qt/5.12.6/gcc_64/mkspecs/features/default_pre.prf \
+		../../../../Qt/5.12.6/gcc_64/mkspecs/features/resolve_config.prf \
+		../../../../Qt/5.12.6/gcc_64/mkspecs/features/default_post.prf \
+		../../../../Qt/5.12.6/gcc_64/mkspecs/features/qml_debug.prf \
+		../../../../Qt/5.12.6/gcc_64/mkspecs/features/warn_on.prf \
+		../../../../Qt/5.12.6/gcc_64/mkspecs/features/qt.prf \
+		../../../../Qt/5.12.6/gcc_64/mkspecs/features/resources.prf \
+		../../../../Qt/5.12.6/gcc_64/mkspecs/features/moc.prf \
+		../../../../Qt/5.12.6/gcc_64/mkspecs/features/unix/opengl.prf \
+		../../../../Qt/5.12.6/gcc_64/mkspecs/features/uic.prf \
+		../../../../Qt/5.12.6/gcc_64/mkspecs/features/unix/thread.prf \
+		../../../../Qt/5.12.6/gcc_64/mkspecs/features/qmake_use.prf \
+		../../../../Qt/5.12.6/gcc_64/mkspecs/features/file_copies.prf \
+		../../../../Qt/5.12.6/gcc_64/mkspecs/features/testcase_targets.prf \
+		../../../../Qt/5.12.6/gcc_64/mkspecs/features/exceptions.prf \
+		../../../../Qt/5.12.6/gcc_64/mkspecs/features/yacc.prf \
+		../../../../Qt/5.12.6/gcc_64/mkspecs/features/lex.prf \
+		../RELP/RELP.pro ../RELP/login.h \
+		../RELP/membros.h \
+		../RELP/telaprincipal.h ../RELP/login.cpp \
+		../RELP/main.cpp \
+		../RELP/membros.cpp \
+>>>>>>> ac4287af38dd2a589410373d9f83cc6511311cd3
 		../RELP/telaprincipal.cpp
 QMAKE_TARGET  = RELP
 DESTDIR       = 
@@ -279,7 +320,11 @@ TARGET        = RELP
 first: all
 ####### Build rules
 
+<<<<<<< HEAD
 RELP: ui_integrantes.h ui_login.h ui_republica.h ui_telaprincipal.h $(OBJECTS)  
+=======
+RELP: ui_login.h ui_membros.h ui_telaprincipal.h $(OBJECTS)  
+>>>>>>> ac4287af38dd2a589410373d9f83cc6511311cd3
 	$(LINK) $(LFLAGS) -o $(TARGET) $(OBJECTS) $(OBJCOMP) $(LIBS)
 
 Makefile: ../RELP/RELP.pro ../../../Qt/5.12.6/gcc_64/mkspecs/linux-g++/qmake.conf ../../../Qt/5.12.6/gcc_64/mkspecs/features/spec_pre.prf \
@@ -687,10 +732,17 @@ dist: distdir FORCE
 distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
+<<<<<<< HEAD
 	$(COPY_FILE) --parents ../../../Qt/5.12.6/gcc_64/mkspecs/features/data/dummy.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents ../RELP/integrantes.h ../RELP/login.h ../RELP/republica.h ../RELP/telaprincipal.h $(DISTDIR)/
 	$(COPY_FILE) --parents ../RELP/integrantes.cpp ../RELP/login.cpp ../RELP/main.cpp ../RELP/republica.cpp ../RELP/telaprincipal.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents ../RELP/integrantes.ui ../RELP/login.ui ../RELP/republica.ui ../RELP/telaprincipal.ui $(DISTDIR)/
+=======
+	$(COPY_FILE) --parents ../../../../Qt/5.12.6/gcc_64/mkspecs/features/data/dummy.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents ../RELP/login.h ../RELP/membros.h ../RELP/telaprincipal.h $(DISTDIR)/
+	$(COPY_FILE) --parents ../RELP/login.cpp ../RELP/main.cpp ../RELP/membros.cpp ../RELP/telaprincipal.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents ../RELP/login.ui ../RELP/membros.ui ../RELP/telaprincipal.ui $(DISTDIR)/
+>>>>>>> ac4287af38dd2a589410373d9f83cc6511311cd3
 
 
 clean: compiler_clean 
@@ -722,6 +774,7 @@ compiler_moc_predefs_clean:
 moc_predefs.h: ../../../Qt/5.12.6/gcc_64/mkspecs/features/data/dummy.cpp
 	g++ -pipe -g -std=gnu++11 -Wall -W -dM -E -o moc_predefs.h ../../../Qt/5.12.6/gcc_64/mkspecs/features/data/dummy.cpp
 
+<<<<<<< HEAD
 compiler_moc_header_make_all: moc_integrantes.cpp moc_login.cpp moc_republica.cpp moc_telaprincipal.cpp
 compiler_moc_header_clean:
 	-$(DEL_FILE) moc_integrantes.cpp moc_login.cpp moc_republica.cpp moc_telaprincipal.cpp
@@ -946,6 +999,121 @@ moc_login.cpp: ../RELP/login.h \
 		../../../Qt/5.12.6/gcc_64/include/QtGui/qicon.h \
 		../RELP/republica.h \
 		../RELP/integrantes.h \
+=======
+compiler_moc_header_make_all: moc_login.cpp moc_membros.cpp moc_telaprincipal.cpp
+compiler_moc_header_clean:
+	-$(DEL_FILE) moc_login.cpp moc_membros.cpp moc_telaprincipal.cpp
+moc_login.cpp: ../RELP/login.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtWidgets/QDialog \
+		../../../../Qt/5.12.6/gcc_64/include/QtWidgets/qdialog.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtWidgets/qtwidgetsglobal.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qtguiglobal.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qglobal.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qconfig-bootstrapped.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qconfig.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qtcore-config.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qsystemdetection.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qprocessordetection.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qcompilerdetection.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qtypeinfo.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qsysinfo.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qlogging.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qflags.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qatomic.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qbasicatomic.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qatomic_bootstrap.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qgenericatomic.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qatomic_cxx11.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qatomic_msvc.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qglobalstatic.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qmutex.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qnumeric.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qversiontagging.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qtgui-config.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtWidgets/qtwidgets-config.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtWidgets/qwidget.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qwindowdefs.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qobjectdefs.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qnamespace.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qobjectdefs_impl.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qwindowdefs_win.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qobject.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qstring.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qchar.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qbytearray.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qrefcount.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qarraydata.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qstringliteral.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qstringalgorithms.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qstringview.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qstringbuilder.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qlist.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qalgorithms.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qiterator.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qhashfunctions.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qpair.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qbytearraylist.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qstringlist.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qregexp.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qstringmatcher.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qcoreevent.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qscopedpointer.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qmetatype.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qvarlengtharray.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qcontainerfwd.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qobject_impl.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qmargins.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qpaintdevice.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qrect.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qsize.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qpoint.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qpalette.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qcolor.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qrgb.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qrgba64.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qbrush.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qvector.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qmatrix.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qpolygon.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qregion.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qdatastream.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qiodevice.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qline.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qtransform.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qpainterpath.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qimage.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qpixelformat.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qpixmap.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qsharedpointer.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qshareddata.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qhash.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qsharedpointer_impl.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qfont.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qfontmetrics.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qfontinfo.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtWidgets/qsizepolicy.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qcursor.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qkeysequence.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qevent.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qvariant.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qmap.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qdebug.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qtextstream.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qlocale.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qset.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qcontiguouscache.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qurl.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qurlquery.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qfile.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qfiledevice.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qvector2d.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qtouchdevice.h \
+		../RELP/telaprincipal.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtWidgets/QMainWindow \
+		../../../../Qt/5.12.6/gcc_64/include/QtWidgets/qmainwindow.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtWidgets/qtabwidget.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qicon.h \
+>>>>>>> ac4287af38dd2a589410373d9f83cc6511311cd3
 		moc_predefs.h \
 		../../../Qt/5.12.6/gcc_64/bin/moc
 	/home/mika/Qt/5.12.6/gcc_64/bin/moc $(DEFINES) --include '/home/mika/Área de Trabalho/trabalho_final_poo/build-RELP-Desktop_Qt_5_12_6_GCC_64bit-Debug/moc_predefs.h' -I/home/mika/Qt/5.12.6/gcc_64/mkspecs/linux-g++ -I'/home/mika/Área de Trabalho/trabalho_final_poo/RELP' -I/home/mika/Qt/5.12.6/gcc_64/include -I/home/mika/Qt/5.12.6/gcc_64/include/QtWidgets -I/home/mika/Qt/5.12.6/gcc_64/include/QtGui -I/home/mika/Qt/5.12.6/gcc_64/include/QtCore -I. -I/usr/include/c++/8 -I/usr/include/x86_64-linux-gnu/c++/8 -I/usr/include/c++/8/backward -I/usr/lib/gcc/x86_64-linux-gnu/8/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/8/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include ../RELP/login.h -o moc_login.cpp
@@ -1058,6 +1226,115 @@ moc_republica.cpp: ../RELP/republica.h \
 		moc_predefs.h \
 		../../../Qt/5.12.6/gcc_64/bin/moc
 	/home/mika/Qt/5.12.6/gcc_64/bin/moc $(DEFINES) --include '/home/mika/Área de Trabalho/trabalho_final_poo/build-RELP-Desktop_Qt_5_12_6_GCC_64bit-Debug/moc_predefs.h' -I/home/mika/Qt/5.12.6/gcc_64/mkspecs/linux-g++ -I'/home/mika/Área de Trabalho/trabalho_final_poo/RELP' -I/home/mika/Qt/5.12.6/gcc_64/include -I/home/mika/Qt/5.12.6/gcc_64/include/QtWidgets -I/home/mika/Qt/5.12.6/gcc_64/include/QtGui -I/home/mika/Qt/5.12.6/gcc_64/include/QtCore -I. -I/usr/include/c++/8 -I/usr/include/x86_64-linux-gnu/c++/8 -I/usr/include/c++/8/backward -I/usr/lib/gcc/x86_64-linux-gnu/8/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/8/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include ../RELP/republica.h -o moc_republica.cpp
+
+moc_membros.cpp: ../RELP/membros.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtWidgets/QDialog \
+		../../../../Qt/5.12.6/gcc_64/include/QtWidgets/qdialog.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtWidgets/qtwidgetsglobal.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qtguiglobal.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qglobal.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qconfig-bootstrapped.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qconfig.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qtcore-config.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qsystemdetection.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qprocessordetection.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qcompilerdetection.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qtypeinfo.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qsysinfo.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qlogging.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qflags.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qatomic.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qbasicatomic.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qatomic_bootstrap.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qgenericatomic.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qatomic_cxx11.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qatomic_msvc.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qglobalstatic.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qmutex.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qnumeric.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qversiontagging.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qtgui-config.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtWidgets/qtwidgets-config.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtWidgets/qwidget.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qwindowdefs.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qobjectdefs.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qnamespace.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qobjectdefs_impl.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qwindowdefs_win.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qobject.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qstring.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qchar.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qbytearray.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qrefcount.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qarraydata.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qstringliteral.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qstringalgorithms.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qstringview.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qstringbuilder.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qlist.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qalgorithms.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qiterator.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qhashfunctions.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qpair.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qbytearraylist.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qstringlist.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qregexp.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qstringmatcher.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qcoreevent.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qscopedpointer.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qmetatype.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qvarlengtharray.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qcontainerfwd.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qobject_impl.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qmargins.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qpaintdevice.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qrect.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qsize.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qpoint.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qpalette.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qcolor.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qrgb.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qrgba64.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qbrush.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qvector.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qmatrix.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qpolygon.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qregion.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qdatastream.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qiodevice.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qline.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qtransform.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qpainterpath.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qimage.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qpixelformat.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qpixmap.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qsharedpointer.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qshareddata.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qhash.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qsharedpointer_impl.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qfont.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qfontmetrics.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qfontinfo.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtWidgets/qsizepolicy.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qcursor.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qkeysequence.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qevent.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qvariant.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qmap.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qdebug.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qtextstream.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qlocale.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qset.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qcontiguouscache.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qurl.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qurlquery.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qfile.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qfiledevice.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qvector2d.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qtouchdevice.h \
+		moc_predefs.h \
+		../../../../Qt/5.12.6/gcc_64/bin/moc
+	/home/theago/Qt/5.12.6/gcc_64/bin/moc $(DEFINES) --include /home/theago/Desktop/vsacredita/trabalho_final_poo/build-RELP-Desktop_Qt_5_12_6_GCC_64bit-Debug/moc_predefs.h -I/home/theago/Qt/5.12.6/gcc_64/mkspecs/linux-g++ -I/home/theago/Desktop/vsacredita/trabalho_final_poo/RELP -I/home/theago/Qt/5.12.6/gcc_64/include -I/home/theago/Qt/5.12.6/gcc_64/include/QtWidgets -I/home/theago/Qt/5.12.6/gcc_64/include/QtGui -I/home/theago/Qt/5.12.6/gcc_64/include/QtCore -I. -I/usr/include/c++/8 -I/usr/include/x86_64-linux-gnu/c++/8 -I/usr/include/c++/8/backward -I/usr/lib/gcc/x86_64-linux-gnu/8/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/8/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include ../RELP/membros.h -o moc_membros.cpp
 
 moc_telaprincipal.cpp: ../RELP/telaprincipal.h \
 		../../../Qt/5.12.6/gcc_64/include/QtWidgets/QMainWindow \
@@ -1178,6 +1455,7 @@ compiler_moc_objc_header_make_all:
 compiler_moc_objc_header_clean:
 compiler_moc_source_make_all:
 compiler_moc_source_clean:
+<<<<<<< HEAD
 compiler_uic_make_all: ui_integrantes.h ui_login.h ui_republica.h ui_telaprincipal.h
 compiler_uic_clean:
 	-$(DEL_FILE) ui_integrantes.h ui_login.h ui_republica.h ui_telaprincipal.h
@@ -1185,6 +1463,11 @@ ui_integrantes.h: ../RELP/integrantes.ui \
 		../../../Qt/5.12.6/gcc_64/bin/uic
 	/home/mika/Qt/5.12.6/gcc_64/bin/uic ../RELP/integrantes.ui -o ui_integrantes.h
 
+=======
+compiler_uic_make_all: ui_login.h ui_membros.h ui_telaprincipal.h
+compiler_uic_clean:
+	-$(DEL_FILE) ui_login.h ui_membros.h ui_telaprincipal.h
+>>>>>>> ac4287af38dd2a589410373d9f83cc6511311cd3
 ui_login.h: ../RELP/login.ui \
 		../../../Qt/5.12.6/gcc_64/bin/uic
 	/home/mika/Qt/5.12.6/gcc_64/bin/uic ../RELP/login.ui -o ui_login.h
@@ -1192,6 +1475,10 @@ ui_login.h: ../RELP/login.ui \
 ui_republica.h: ../RELP/republica.ui \
 		../../../Qt/5.12.6/gcc_64/bin/uic
 	/home/mika/Qt/5.12.6/gcc_64/bin/uic ../RELP/republica.ui -o ui_republica.h
+
+ui_membros.h: ../RELP/membros.ui \
+		../../../../Qt/5.12.6/gcc_64/bin/uic
+	/home/theago/Qt/5.12.6/gcc_64/bin/uic ../RELP/membros.ui -o ui_membros.h
 
 ui_telaprincipal.h: ../RELP/telaprincipal.ui \
 		../../../Qt/5.12.6/gcc_64/bin/uic
@@ -1324,6 +1611,7 @@ integrantes.o: ../RELP/integrantes.cpp ../RELP/integrantes.h \
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o integrantes.o ../RELP/integrantes.cpp
 
 login.o: ../RELP/login.cpp ../RELP/login.h \
+<<<<<<< HEAD
 		../../../Qt/5.12.6/gcc_64/include/QtWidgets/QDialog \
 		../../../Qt/5.12.6/gcc_64/include/QtWidgets/qdialog.h \
 		../../../Qt/5.12.6/gcc_64/include/QtWidgets/qtwidgetsglobal.h \
@@ -1463,6 +1751,132 @@ login.o: ../RELP/login.cpp ../RELP/login.h \
 		../../../Qt/5.12.6/gcc_64/include/QtWidgets/qabstractbutton.h \
 		../../../Qt/5.12.6/gcc_64/include/QtWidgets/QVBoxLayout \
 		../../../Qt/5.12.6/gcc_64/include/QtWidgets/QWidget
+=======
+		../../../../Qt/5.12.6/gcc_64/include/QtWidgets/QDialog \
+		../../../../Qt/5.12.6/gcc_64/include/QtWidgets/qdialog.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtWidgets/qtwidgetsglobal.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qtguiglobal.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qglobal.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qconfig-bootstrapped.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qconfig.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qtcore-config.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qsystemdetection.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qprocessordetection.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qcompilerdetection.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qtypeinfo.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qsysinfo.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qlogging.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qflags.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qatomic.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qbasicatomic.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qatomic_bootstrap.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qgenericatomic.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qatomic_cxx11.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qatomic_msvc.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qglobalstatic.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qmutex.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qnumeric.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qversiontagging.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qtgui-config.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtWidgets/qtwidgets-config.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtWidgets/qwidget.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qwindowdefs.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qobjectdefs.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qnamespace.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qobjectdefs_impl.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qwindowdefs_win.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qobject.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qstring.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qchar.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qbytearray.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qrefcount.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qarraydata.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qstringliteral.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qstringalgorithms.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qstringview.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qstringbuilder.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qlist.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qalgorithms.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qiterator.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qhashfunctions.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qpair.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qbytearraylist.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qstringlist.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qregexp.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qstringmatcher.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qcoreevent.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qscopedpointer.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qmetatype.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qvarlengtharray.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qcontainerfwd.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qobject_impl.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qmargins.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qpaintdevice.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qrect.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qsize.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qpoint.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qpalette.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qcolor.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qrgb.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qrgba64.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qbrush.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qvector.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qmatrix.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qpolygon.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qregion.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qdatastream.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qiodevice.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qline.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qtransform.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qpainterpath.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qimage.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qpixelformat.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qpixmap.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qsharedpointer.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qshareddata.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qhash.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qsharedpointer_impl.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qfont.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qfontmetrics.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qfontinfo.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtWidgets/qsizepolicy.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qcursor.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qkeysequence.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qevent.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qvariant.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qmap.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qdebug.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qtextstream.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qlocale.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qset.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qcontiguouscache.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qurl.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qurlquery.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qfile.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qfiledevice.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qvector2d.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qtouchdevice.h \
+		../RELP/telaprincipal.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtWidgets/QMainWindow \
+		../../../../Qt/5.12.6/gcc_64/include/QtWidgets/qmainwindow.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtWidgets/qtabwidget.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qicon.h \
+		ui_login.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/QVariant \
+		../../../../Qt/5.12.6/gcc_64/include/QtWidgets/QApplication \
+		../../../../Qt/5.12.6/gcc_64/include/QtWidgets/qapplication.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qcoreapplication.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qeventloop.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtWidgets/qdesktopwidget.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qguiapplication.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qinputmethod.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtWidgets/QLabel \
+		../../../../Qt/5.12.6/gcc_64/include/QtWidgets/qlabel.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtWidgets/qframe.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtWidgets/QPushButton \
+		../../../../Qt/5.12.6/gcc_64/include/QtWidgets/qpushbutton.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtWidgets/qabstractbutton.h
+>>>>>>> ac4287af38dd2a589410373d9f83cc6511311cd3
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o login.o ../RELP/login.cpp
 
 main.o: ../RELP/main.cpp ../RELP/telaprincipal.h \
@@ -1586,6 +2000,7 @@ main.o: ../RELP/main.cpp ../RELP/telaprincipal.h \
 		../../../Qt/5.12.6/gcc_64/include/QtGui/qinputmethod.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o ../RELP/main.cpp
 
+<<<<<<< HEAD
 republica.o: ../RELP/republica.cpp ../RELP/republica.h \
 		../../../Qt/5.12.6/gcc_64/include/QtWidgets/QDialog \
 		../../../Qt/5.12.6/gcc_64/include/QtWidgets/qdialog.h \
@@ -1693,6 +2108,115 @@ republica.o: ../RELP/republica.cpp ../RELP/republica.h \
 		../../../Qt/5.12.6/gcc_64/include/QtGui/qtouchdevice.h \
 		ui_republica.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o republica.o ../RELP/republica.cpp
+=======
+membros.o: ../RELP/membros.cpp ../RELP/membros.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtWidgets/QDialog \
+		../../../../Qt/5.12.6/gcc_64/include/QtWidgets/qdialog.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtWidgets/qtwidgetsglobal.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qtguiglobal.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qglobal.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qconfig-bootstrapped.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qconfig.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qtcore-config.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qsystemdetection.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qprocessordetection.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qcompilerdetection.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qtypeinfo.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qsysinfo.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qlogging.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qflags.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qatomic.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qbasicatomic.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qatomic_bootstrap.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qgenericatomic.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qatomic_cxx11.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qatomic_msvc.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qglobalstatic.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qmutex.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qnumeric.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qversiontagging.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qtgui-config.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtWidgets/qtwidgets-config.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtWidgets/qwidget.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qwindowdefs.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qobjectdefs.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qnamespace.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qobjectdefs_impl.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qwindowdefs_win.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qobject.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qstring.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qchar.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qbytearray.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qrefcount.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qarraydata.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qstringliteral.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qstringalgorithms.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qstringview.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qstringbuilder.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qlist.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qalgorithms.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qiterator.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qhashfunctions.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qpair.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qbytearraylist.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qstringlist.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qregexp.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qstringmatcher.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qcoreevent.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qscopedpointer.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qmetatype.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qvarlengtharray.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qcontainerfwd.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qobject_impl.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qmargins.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qpaintdevice.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qrect.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qsize.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qpoint.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qpalette.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qcolor.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qrgb.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qrgba64.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qbrush.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qvector.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qmatrix.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qpolygon.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qregion.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qdatastream.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qiodevice.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qline.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qtransform.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qpainterpath.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qimage.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qpixelformat.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qpixmap.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qsharedpointer.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qshareddata.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qhash.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qsharedpointer_impl.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qfont.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qfontmetrics.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qfontinfo.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtWidgets/qsizepolicy.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qcursor.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qkeysequence.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qevent.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qvariant.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qmap.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qdebug.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qtextstream.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qlocale.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qset.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qcontiguouscache.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qurl.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qurlquery.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qfile.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qfiledevice.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qvector2d.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qtouchdevice.h \
+		ui_membros.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o membros.o ../RELP/membros.cpp
+>>>>>>> ac4287af38dd2a589410373d9f83cc6511311cd3
 
 telaprincipal.o: ../RELP/telaprincipal.cpp ../RELP/telaprincipal.h \
 		../../../Qt/5.12.6/gcc_64/include/QtWidgets/QMainWindow \
@@ -1806,6 +2330,7 @@ telaprincipal.o: ../RELP/telaprincipal.cpp ../RELP/telaprincipal.h \
 		../../../Qt/5.12.6/gcc_64/include/QtWidgets/qdialog.h \
 		../RELP/integrantes.h \
 		ui_telaprincipal.h \
+<<<<<<< HEAD
 		../../../Qt/5.12.6/gcc_64/include/QtCore/QVariant \
 		../../../Qt/5.12.6/gcc_64/include/QtWidgets/QApplication \
 		../../../Qt/5.12.6/gcc_64/include/QtWidgets/qapplication.h \
@@ -1833,6 +2358,24 @@ telaprincipal.o: ../RELP/telaprincipal.cpp ../RELP/telaprincipal.h \
 		../../../Qt/5.12.6/gcc_64/include/QtWidgets/qlayoutitem.h \
 		../../../Qt/5.12.6/gcc_64/include/QtWidgets/qgridlayout.h \
 		../../../Qt/5.12.6/gcc_64/include/QtWidgets/QWidget
+=======
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/QVariant \
+		../../../../Qt/5.12.6/gcc_64/include/QtWidgets/QApplication \
+		../../../../Qt/5.12.6/gcc_64/include/QtWidgets/qapplication.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qcoreapplication.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtCore/qeventloop.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtWidgets/qdesktopwidget.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qguiapplication.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtGui/qinputmethod.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtWidgets/QMenuBar \
+		../../../../Qt/5.12.6/gcc_64/include/QtWidgets/qmenubar.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtWidgets/qmenu.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtWidgets/qaction.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtWidgets/qactiongroup.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtWidgets/QStatusBar \
+		../../../../Qt/5.12.6/gcc_64/include/QtWidgets/qstatusbar.h \
+		../../../../Qt/5.12.6/gcc_64/include/QtWidgets/QWidget
+>>>>>>> ac4287af38dd2a589410373d9f83cc6511311cd3
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o telaprincipal.o ../RELP/telaprincipal.cpp
 
 moc_integrantes.o: moc_integrantes.cpp 
@@ -1841,8 +2384,13 @@ moc_integrantes.o: moc_integrantes.cpp
 moc_login.o: moc_login.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_login.o moc_login.cpp
 
+<<<<<<< HEAD
 moc_republica.o: moc_republica.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_republica.o moc_republica.cpp
+=======
+moc_membros.o: moc_membros.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_membros.o moc_membros.cpp
+>>>>>>> ac4287af38dd2a589410373d9f83cc6511311cd3
 
 moc_telaprincipal.o: moc_telaprincipal.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_telaprincipal.o moc_telaprincipal.cpp

@@ -25,12 +25,17 @@ class Ui_TelaPrincipal
 {
 public:
     QWidget *centralwidget;
+<<<<<<< HEAD
     QWidget *widget;
     QVBoxLayout *verticalLayout_2;
     QLabel *label;
     QVBoxLayout *verticalLayout;
     QPushButton *membros;
     QPushButton *Rep;
+=======
+    QPushButton *pushButton;
+    QPushButton *pushButton_2;
+>>>>>>> ac4287af38dd2a589410373d9f83cc6511311cd3
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -41,6 +46,7 @@ public:
         TelaPrincipal->resize(1302, 610);
         centralwidget = new QWidget(TelaPrincipal);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
+<<<<<<< HEAD
         widget = new QWidget(centralwidget);
         widget->setObjectName(QString::fromUtf8("widget"));
         widget->setGeometry(QRect(320, 30, 654, 531));
@@ -68,6 +74,14 @@ public:
 
         verticalLayout_2->addLayout(verticalLayout);
 
+=======
+        pushButton = new QPushButton(centralwidget);
+        pushButton->setObjectName(QString::fromUtf8("pushButton"));
+        pushButton->setGeometry(QRect(310, 120, 80, 24));
+        pushButton_2 = new QPushButton(centralwidget);
+        pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
+        pushButton_2->setGeometry(QRect(310, 180, 80, 24));
+>>>>>>> ac4287af38dd2a589410373d9f83cc6511311cd3
         TelaPrincipal->setCentralWidget(centralwidget);
         menubar = new QMenuBar(TelaPrincipal);
         menubar->setObjectName(QString::fromUtf8("menubar"));
@@ -84,10 +98,16 @@ public:
 
     void retranslateUi(QMainWindow *TelaPrincipal)
     {
+<<<<<<< HEAD
         TelaPrincipal->setWindowTitle(QApplication::translate("TelaPrincipal", "Tela Principal", nullptr));
         label->setText(QString());
         membros->setText(QApplication::translate("TelaPrincipal", "Membros", nullptr));
         Rep->setText(QApplication::translate("TelaPrincipal", "Reep\303\272blica", nullptr));
+=======
+        TelaPrincipal->setWindowTitle(QApplication::translate("TelaPrincipal", "TelaPrincipal", nullptr));
+        pushButton->setText(QApplication::translate("TelaPrincipal", "Integrantes", nullptr));
+        pushButton_2->setText(QApplication::translate("TelaPrincipal", "REP", nullptr));
+>>>>>>> ac4287af38dd2a589410373d9f83cc6511311cd3
     } // retranslateUi
 
 };
