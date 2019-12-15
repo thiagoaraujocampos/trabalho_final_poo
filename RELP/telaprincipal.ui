@@ -6,21 +6,62 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>809</width>
-    <height>443</height>
+    <width>1302</width>
+    <height>610</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>TelaPrincipal</string>
+   <string>Tela Principal</string>
   </property>
-  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>30</y>
+      <width>654</width>
+      <height>531</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../../../Downloads/spp.jpeg</pixmap>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QPushButton" name="membros">
+         <property name="text">
+          <string>Membros</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="Rep">
+         <property name="text">
+          <string>Reepública</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+  </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>809</width>
-     <height>21</height>
+     <width>1302</width>
+     <height>22</height>
     </rect>
    </property>
   </widget>

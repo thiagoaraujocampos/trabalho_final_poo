@@ -19,16 +19,19 @@ SOURCES += \
     integrantes.cpp \
     login.cpp \
     main.cpp \
+    republica.cpp \
     telaprincipal.cpp
 
 HEADERS += \
     integrantes.h \
     login.h \
+    republica.h \
     telaprincipal.h
 
 FORMS += \
     integrantes.ui \
     login.ui \
+    republica.ui \
     telaprincipal.ui
 
 # Default rules for deployment.

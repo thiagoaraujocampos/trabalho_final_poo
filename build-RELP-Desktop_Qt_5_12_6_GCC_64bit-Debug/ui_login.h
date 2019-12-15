@@ -12,8 +12,12 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QDialog>
+#include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
+#include <QtWidgets/QLineEdit>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QVBoxLayout>
+#include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
 
@@ -21,8 +25,14 @@ class Ui_Login
 {
 public:
     QLabel *label;
+    QWidget *widget;
+    QVBoxLayout *verticalLayout;
+    QHBoxLayout *horizontalLayout;
     QLabel *label_2;
+    QLineEdit *lineEdit;
+    QHBoxLayout *horizontalLayout_2;
     QLabel *label_3;
+    QLineEdit *lineEdit_2;
     QPushButton *btnLogar;
 
     void setupUi(QDialog *Login)
@@ -32,23 +42,50 @@ public:
         Login->resize(350, 394);
         label = new QLabel(Login);
         label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(0, 20, 351, 71));
-        QFont font;
-        font.setFamily(QString::fromUtf8("Ubuntu Condensed"));
-        font.setPointSize(24);
-        font.setBold(true);
-        font.setWeight(75);
-        label->setFont(font);
-        label->setAlignment(Qt::AlignCenter);
-        label_2 = new QLabel(Login);
+        label->setGeometry(QRect(70, 30, 211, 111));
+        label->setPixmap(QPixmap(QString::fromUtf8("../../../Downloads/spp.jpeg")));
+        widget = new QWidget(Login);
+        widget->setObjectName(QString::fromUtf8("widget"));
+        widget->setGeometry(QRect(20, 190, 311, 141));
+        verticalLayout = new QVBoxLayout(widget);
+        verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
+        verticalLayout->setContentsMargins(0, 0, 0, 0);
+        horizontalLayout = new QHBoxLayout();
+        horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
+        label_2 = new QLabel(widget);
         label_2->setObjectName(QString::fromUtf8("label_2"));
-        label_2->setGeometry(QRect(90, 160, 58, 16));
-        label_3 = new QLabel(Login);
+
+        horizontalLayout->addWidget(label_2);
+
+        lineEdit = new QLineEdit(widget);
+        lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
+
+        horizontalLayout->addWidget(lineEdit);
+
+
+        verticalLayout->addLayout(horizontalLayout);
+
+        horizontalLayout_2 = new QHBoxLayout();
+        horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
+        label_3 = new QLabel(widget);
         label_3->setObjectName(QString::fromUtf8("label_3"));
-        label_3->setGeometry(QRect(90, 210, 58, 16));
-        btnLogar = new QPushButton(Login);
+
+        horizontalLayout_2->addWidget(label_3);
+
+        lineEdit_2 = new QLineEdit(widget);
+        lineEdit_2->setObjectName(QString::fromUtf8("lineEdit_2"));
+        lineEdit_2->setEchoMode(QLineEdit::Password);
+
+        horizontalLayout_2->addWidget(lineEdit_2);
+
+
+        verticalLayout->addLayout(horizontalLayout_2);
+
+        btnLogar = new QPushButton(widget);
         btnLogar->setObjectName(QString::fromUtf8("btnLogar"));
-        btnLogar->setGeometry(QRect(220, 340, 80, 24));
+
+        verticalLayout->addWidget(btnLogar);
+
 
         retranslateUi(Login);
 
@@ -58,8 +95,8 @@ public:
     void retranslateUi(QDialog *Login)
     {
         Login->setWindowTitle(QApplication::translate("Login", "Dialog", nullptr));
-        label->setText(QApplication::translate("Login", "RELP", nullptr));
-        label_2->setText(QApplication::translate("Login", "Nome", nullptr));
+        label->setText(QString());
+        label_2->setText(QApplication::translate("Login", "Usu\303\241rio", nullptr));
         label_3->setText(QApplication::translate("Login", "Senha", nullptr));
         btnLogar->setText(QApplication::translate("Login", "Entrar", nullptr));
     } // retranslateUi
