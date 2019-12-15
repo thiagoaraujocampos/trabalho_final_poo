@@ -37,10 +37,10 @@ void Jogo::update() {
 }
 
 void Jogo::render() {
-  window.clear();
+  window.clear(Color::Black);
   mapa->geraMapa(jogador1, jogador2, &window);
-  window.draw(jogador1->getCirculo());
-  window.draw(jogador2->getCirculo());
-  //window.draw(jogador1->getSprite());
+  jogador1->animacaoPersonagem();
+  window.draw(jogador1->getSprite());
+  window.draw(jogador2->getSprite());
   window.display();
 }

@@ -5,6 +5,7 @@ Mapa::Mapa() {}
 Mapa::~Mapa() {}
 
 void Mapa::geraMapa(Jogador *jogador1, Jogador *jogador2, RenderWindow *window) {
+  Color color(1, 50, 6);
   for (int i = 0; i < 20; i++) {
     for (int j = 0; j < 20; j++) {
       quadrado[i][j].setSize(Vector2f(40, 40));
@@ -13,7 +14,7 @@ void Mapa::geraMapa(Jogador *jogador1, Jogador *jogador2, RenderWindow *window) 
 
       if (jogador1->getX() + 20 > posx && jogador1->getX() + 20 < posx + 40 && jogador1->getY() + 20 > posy && jogador1->getY() + 20 < posy + 40) {
         matriz[i][j] = 1;
-        quadrado[i][j].setFillColor(Color::Red);
+        quadrado[i][j].setFillColor(color);
         jogador1->setPontos(jogador1->getPontos()+1);
       }
       

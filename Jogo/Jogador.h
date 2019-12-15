@@ -27,8 +27,7 @@ public:
   Sprite getSprite();
 
 private:
-  int x = 0, y = 0;
-  CircleShape circulo;
+  float x, y;
   int selecao;
   int pontos = 0;
   int personagens;
