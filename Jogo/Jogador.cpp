@@ -2,8 +2,8 @@
 
 Jogador::Jogador(int selecao) : selecao(selecao) {
   carregaArquivos();
-  if(selecao == 1) { this->x = 200; this->y = 0; }
-  else if(selecao == 2) { this->x = 800; this->y = 650; }
+  if(selecao == 1) { this->x = WIDTH-800; this->y = -10; }
+  else if(selecao == 2) { this->x = WIDTH-50; this->y = HEIGHT-50; }
 }
 
 Jogador::~Jogador() {}
@@ -32,32 +32,32 @@ void Jogador::move() {
 
   if (selecao == 1) {
     if (Keyboard::isKeyPressed(Keyboard::D)) {
-      x += 0.2;
+      x += 0.5;
       lado_atual = 0;
     } else if (Keyboard::isKeyPressed(Keyboard::A)) {
-      x -= 0.2;
+      x -= 0.5;
       lado_atual = 1;
     } else if (Keyboard::isKeyPressed(Keyboard::W)) {
-      y -= 0.2;
+      y -= 0.5;
       lado_atual = 2;
     } else if (Keyboard::isKeyPressed(Keyboard::S)) {
-      y += 0.2;
+      y += 0.5;
       lado_atual = 3;
     } else {
       lado_atual = 4;
     }
   } else if (selecao == 2) {
     if (Keyboard::isKeyPressed(Keyboard::Right)) {
-      x += 0.2;
+      x += 0.5;
       lado_atual = 0;
     } else if (Keyboard::isKeyPressed(Keyboard::Left)) {
-      x -= 0.2;
+      x -= 0.5;
       lado_atual = 1;
     } else if (Keyboard::isKeyPressed(Keyboard::Up)) {
-      y -= 0.2;
+      y -= 0.5;
       lado_atual = 2;
     } else if (Keyboard::isKeyPressed(Keyboard::Down)) {
-      y += 0.2;
+      y += 0.5;
       lado_atual = 3;
     } else {
       lado_atual = 4;
