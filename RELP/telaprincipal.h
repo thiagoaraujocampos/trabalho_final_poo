@@ -1,9 +1,8 @@
 #ifndef TELAPRINCIPAL_H
 #define TELAPRINCIPAL_H
-
-#include <QMainWindow>
 #include "republica.h"
-#include "integrantes.h"
+#include "membros.h"
+#include <QMainWindow>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class TelaPrincipal; }
@@ -18,13 +17,13 @@ public:
     ~TelaPrincipal();
 
 private slots:
-    void on_membros_clicked();
+    void on_republica_clicked();
 
-    void on_Rep_clicked();
+    void on_membros_clicked();
 
 private:
     Ui::TelaPrincipal *ui;
-    integrantes *integ;
     Republica *rep;
+    Membros *memb;
 };
 #endif // TELAPRINCIPAL_H

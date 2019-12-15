@@ -18,29 +18,20 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
     login.cpp \
     main.cpp \
-<<<<<<< HEAD
-    republica.cpp \
-=======
     membros.cpp \
->>>>>>> ac4287af38dd2a589410373d9f83cc6511311cd3
+    republica.cpp \
     telaprincipal.cpp
 
 HEADERS += \
     login.h \
-<<<<<<< HEAD
-    republica.h \
-=======
     membros.h \
->>>>>>> ac4287af38dd2a589410373d9f83cc6511311cd3
+    republica.h \
     telaprincipal.h
 
 FORMS += \
     login.ui \
-<<<<<<< HEAD
-    republica.ui \
-=======
     membros.ui \
->>>>>>> ac4287af38dd2a589410373d9f83cc6511311cd3
+    republica.ui \
     telaprincipal.ui
 
 # Default rules for deployment.

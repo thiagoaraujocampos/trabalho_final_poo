@@ -1,16 +1,16 @@
 /****************************************************************************
-** Meta object code from reading C++ file 'login.h'
+** Meta object code from reading C++ file 'integrante.h'
 **
 ** Created by: The Qt Meta Object Compiler version 67 (Qt 5.12.6)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
-#include "../RELP/login.h"
+#include "../T3_POO/integrante.h"
 #include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
-#error "The header file 'login.h' doesn't include <QObject>."
+#error "The header file 'integrante.h' doesn't include <QObject>."
 #elif Q_MOC_OUTPUT_REVISION != 67
 #error "This file was generated using the moc from 5.12.6. It"
 #error "cannot be used with the include files from this version of Qt."
@@ -20,27 +20,27 @@
 QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
-struct qt_meta_stringdata_Login_t {
+struct qt_meta_stringdata_Integrante_t {
     QByteArrayData data[3];
-    char stringdata0[27];
+    char stringdata0[34];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    qptrdiff(offsetof(qt_meta_stringdata_Login_t, stringdata0) + ofs \
+    qptrdiff(offsetof(qt_meta_stringdata_Integrante_t, stringdata0) + ofs \
         - idx * sizeof(QByteArrayData)) \
     )
-static const qt_meta_stringdata_Login_t qt_meta_stringdata_Login = {
+static const qt_meta_stringdata_Integrante_t qt_meta_stringdata_Integrante = {
     {
-QT_MOC_LITERAL(0, 0, 5), // "Login"
-QT_MOC_LITERAL(1, 6, 19), // "on_btnLogar_clicked"
-QT_MOC_LITERAL(2, 26, 0) // ""
+QT_MOC_LITERAL(0, 0, 10), // "Integrante"
+QT_MOC_LITERAL(1, 11, 21), // "on_pushButton_clicked"
+QT_MOC_LITERAL(2, 33, 0) // ""
 
     },
-    "Login\0on_btnLogar_clicked\0"
+    "Integrante\0on_pushButton_clicked\0"
 };
 #undef QT_MOC_LITERAL
 
-static const uint qt_meta_data_Login[] = {
+static const uint qt_meta_data_Integrante[] = {
 
  // content:
        8,       // revision
@@ -62,45 +62,45 @@ static const uint qt_meta_data_Login[] = {
        0        // eod
 };
 
-void Login::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
+void Integrante::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
     if (_c == QMetaObject::InvokeMetaMethod) {
-        auto *_t = static_cast<Login *>(_o);
+        auto *_t = static_cast<Integrante *>(_o);
         Q_UNUSED(_t)
         switch (_id) {
-        case 0: _t->on_btnLogar_clicked(); break;
+        case 0: _t->on_pushButton_clicked(); break;
         default: ;
         }
     }
     Q_UNUSED(_a);
 }
 
-QT_INIT_METAOBJECT const QMetaObject Login::staticMetaObject = { {
-    &QDialog::staticMetaObject,
-    qt_meta_stringdata_Login.data,
-    qt_meta_data_Login,
+QT_INIT_METAOBJECT const QMetaObject Integrante::staticMetaObject = { {
+    &QMainWindow::staticMetaObject,
+    qt_meta_stringdata_Integrante.data,
+    qt_meta_data_Integrante,
     qt_static_metacall,
     nullptr,
     nullptr
 } };
 
 
-const QMetaObject *Login::metaObject() const
+const QMetaObject *Integrante::metaObject() const
 {
     return QObject::d_ptr->metaObject ? QObject::d_ptr->dynamicMetaObject() : &staticMetaObject;
 }
 
-void *Login::qt_metacast(const char *_clname)
+void *Integrante::qt_metacast(const char *_clname)
 {
     if (!_clname) return nullptr;
-    if (!strcmp(_clname, qt_meta_stringdata_Login.stringdata0))
+    if (!strcmp(_clname, qt_meta_stringdata_Integrante.stringdata0))
         return static_cast<void*>(this);
-    return QDialog::qt_metacast(_clname);
+    return QMainWindow::qt_metacast(_clname);
 }
 
-int Login::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+int Integrante::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 {
-    _id = QDialog::qt_metacall(_c, _id, _a);
+    _id = QMainWindow::qt_metacall(_c, _id, _a);
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {

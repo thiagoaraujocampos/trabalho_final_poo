@@ -14,16 +14,16 @@ TelaPrincipal::~TelaPrincipal()
 }
 
 
-void TelaPrincipal::on_membros_clicked()
-{
-    integ = new integrantes();
-    integ->show();
-    this->close();
-}
-
-void TelaPrincipal::on_Rep_clicked()
+void TelaPrincipal::on_republica_clicked()
 {
     rep = new Republica();
     rep->show();
+    this->close();
+}
+
+void TelaPrincipal::on_membros_clicked()
+{
+    memb = new Membros();
+    memb->show();
     this->close();
 }

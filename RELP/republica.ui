@@ -6,12 +6,12 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1296</width>
-    <height>617</height>
+    <width>1300</width>
+    <height>618</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Republica</string>
+   <string>Repúblca</string>
   </property>
  </widget>
  <resources/>
