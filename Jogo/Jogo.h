@@ -23,7 +23,8 @@ public:
   static const int RANKING = 3;
 
 private:
-  int estado_atual;                                                                                                                        RenderWindow window;
+  int estado_atual;                                                                    
+  RenderWindow window;
   Jogador *jogador1;
   Jogador *jogador2;
   Mapa *mapa;
