@@ -16,19 +16,19 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    integrantes.cpp \
     login.cpp \
     main.cpp \
+    membros.cpp \
     telaprincipal.cpp
 
 HEADERS += \
-    integrantes.h \
     login.h \
+    membros.h \
     telaprincipal.h
 
 FORMS += \
-    integrantes.ui \
     login.ui \
+    membros.ui \
     telaprincipal.ui
 
 # Default rules for deployment.

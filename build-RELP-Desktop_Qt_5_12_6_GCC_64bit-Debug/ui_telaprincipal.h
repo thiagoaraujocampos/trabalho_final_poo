@@ -13,6 +13,7 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
+#include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QWidget>
 
@@ -22,6 +23,8 @@ class Ui_TelaPrincipal
 {
 public:
     QWidget *centralwidget;
+    QPushButton *pushButton;
+    QPushButton *pushButton_2;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -32,6 +35,12 @@ public:
         TelaPrincipal->resize(809, 443);
         centralwidget = new QWidget(TelaPrincipal);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
+        pushButton = new QPushButton(centralwidget);
+        pushButton->setObjectName(QString::fromUtf8("pushButton"));
+        pushButton->setGeometry(QRect(310, 120, 80, 24));
+        pushButton_2 = new QPushButton(centralwidget);
+        pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
+        pushButton_2->setGeometry(QRect(310, 180, 80, 24));
         TelaPrincipal->setCentralWidget(centralwidget);
         menubar = new QMenuBar(TelaPrincipal);
         menubar->setObjectName(QString::fromUtf8("menubar"));
@@ -49,6 +58,8 @@ public:
     void retranslateUi(QMainWindow *TelaPrincipal)
     {
         TelaPrincipal->setWindowTitle(QApplication::translate("TelaPrincipal", "TelaPrincipal", nullptr));
+        pushButton->setText(QApplication::translate("TelaPrincipal", "Integrantes", nullptr));
+        pushButton_2->setText(QApplication::translate("TelaPrincipal", "REP", nullptr));
     } // retranslateUi
 
 };
