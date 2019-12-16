@@ -16,12 +16,15 @@ class Mapa {
 public:
   Mapa();
   virtual ~Mapa();
+  void carrega();
   void geraMapa(Jogador *jogador1, Jogador *jogador2, RenderWindow *window);
 
 private: 
   RectangleShape quadrado[20][20];
   int matriz[20][20];
   int posx = 200, posy = 0;
+  Texture texture;
+  Sprite background;
 };
 
 #endif

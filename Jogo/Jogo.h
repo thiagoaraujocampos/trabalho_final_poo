@@ -3,6 +3,7 @@
 
 #include "Jogador.h"
 #include "Mapa.h"
+#include "Interface.h"
 
 #include <iostream>
 #include <SFML/Audio.hpp>
@@ -28,6 +29,8 @@ private:
   Jogador *jogador1;
   Jogador *jogador2;
   Mapa *mapa;
+  Interface *interface;
+  Clock clockJogo;
   void eventos();
   void update();
   void render();
