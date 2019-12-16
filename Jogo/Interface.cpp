@@ -21,8 +21,8 @@ void Interface::carrega() {
 void Interface::drawInterface(Jogador *jogador1, Jogador *jogador2, RenderWindow *window) {
     textClock.setString(to_string(tempoJogo->getElapsedTime().asSeconds()).substr(0, 5));
     textClock.setPosition(100-(textClock.getGlobalBounds().width/2), 60);
-    ponto1.setPosition(90, 365);
-    ponto2.setPosition(95, 600);
+    ponto1.setPosition(85, 365);
+    ponto2.setPosition(85, 730);
     ponto1.setString(to_string(jogador1->getPontos()));
     ponto2.setString(to_string(jogador1->getPontos()));
     window->draw(textClock);
