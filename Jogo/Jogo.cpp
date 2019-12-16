@@ -3,13 +3,18 @@
 Jogo::Jogo(int largura, int altura, string titulo) {
   window.create(VideoMode(largura, altura), titulo);
   estado_atual = INICIO;
+
   inicio = new Inicio();
+  ranking = new Score(WIDTH, HEIGHT);
+  resultado = new Resultado();
   jogador1 = new Jogador(1);
   jogador2 = new Jogador(2);
   mapa = new Mapa();
-  mapa->carrega();
   interface = new Interface(&clockJogo);
+
+  mapa->carrega();
   interface->carrega();
+
   run();
 }
 
@@ -30,7 +35,8 @@ void Jogo::eventos() {
       window.close();
     if (event.type == Event::EventType::KeyPressed) {
       if (event.key.code == Keyboard::Escape) {
-        window.close();
+        if(estado_atual == 3 || estado_atual == 2) estado_atual = 1;
+        else window.close();
       }
       if(estado_atual == INICIO) 
         inicio->eventos(event, window, &estado_atual, &clockJogo);
@@ -44,7 +50,8 @@ void Jogo::update() {
   } else if (estado_atual == JOGO) {
     jogador1->move();
     jogador2->move();
-  } else if (estado_atual == RANKING) {
+    temporizador();
+  } else if (estado_atual == RESULTADO) {
 
   }
 }
@@ -63,7 +70,10 @@ void Jogo::render() {
     window.draw(jogador1->getSprite());
     window.draw(jogador2->getSprite());
   } else if (estado_atual == RANKING) {
-
+    ranking->draw(window);
+    ranking->atualizaText(window);
+  } else if (estado_atual == RESULTADO) {
+    window.draw(resultado->getBackground());
   }
   window.display();
 }
@@ -74,4 +84,17 @@ int Jogo::getEstado() {
 
 void Jogo::setEstado(int estado) {
   estado_atual = estado;
+}
+
+void Jogo::temporizador() {
+  if (clockJogo.getElapsedTime().asSeconds() > 5.0f && estado_atual == JOGO) {
+    if(jogador1->getPontos() > jogador2->getPontos()){
+      resultado->carrega(1);
+    } if(jogador1->getPontos() < jogador2->getPontos()) {
+      resultado->carrega(2);
+    } else {
+      resultado->carrega(0);
+    }
+    estado_atual = RESULTADO;
+  }
 }

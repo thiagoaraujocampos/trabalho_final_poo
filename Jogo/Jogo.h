@@ -5,6 +5,8 @@
 #include "Mapa.h"
 #include "Interface.h"
 #include "Inicio.h"
+#include "Score.h"
+#include "Resultado.h"
 
 #include <iostream>
 #include <SFML/Audio.hpp>
@@ -19,6 +21,7 @@ public:
   Jogo(int largura, int altura, string titulo);
   virtual ~Jogo();
   void run();
+  void temporizador();
 
   int getEstado();
   void setEstado(int estado);
@@ -26,6 +29,7 @@ public:
   static const int INICIO = 1;
   static const int JOGO = 2;
   static const int RANKING = 3;
+  static const int RESULTADO = 4;
 
 private:
   int estado_atual;                                                                    
@@ -35,6 +39,8 @@ private:
   Mapa *mapa;
   Interface *interface;
   Inicio *inicio;
+  Score *ranking;
+  Resultado *resultado;
   Clock clockJogo;
   void eventos();
   void update();

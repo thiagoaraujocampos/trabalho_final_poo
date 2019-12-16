@@ -1,7 +1,5 @@
 #include "Inicio.h"
 
-class Jogo;
-
 Inicio::Inicio() { carrega(); }
 
 Inicio::~Inicio() {}
@@ -46,7 +44,7 @@ void Inicio::eventos(Event event, RenderWindow &window, int *estado_atual, Clock
     if (selecionado == 0) {
       *estado_atual = 2;
       clockJogo->restart();
-    } else if (selecionado == 2) {
+    } else if (selecionado == 1) {
       *estado_atual = 3;
     } else {
       window.close();
