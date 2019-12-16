@@ -34,6 +34,8 @@ void BinaryFile::leitura(vector<Pontos>& pont) {
         }
     }
 
+    sort(pont.begin(), pont.end(), Pontos::compara);
+
     ifs.close();
 }
 
