@@ -6,6 +6,8 @@ Jogo::Jogo(int largura, int altura, string titulo) : estado_atual(MENU) {
   jogador2 = new Jogador(2);
   mapa = new Mapa();
   mapa->carrega();
+  interface = new Interface(&clockJogo);
+  interface->carrega();
   run();
 }
 
@@ -40,6 +42,7 @@ void Jogo::update() {
 void Jogo::render() {
   window.clear(Color::Black);
   mapa->geraMapa(jogador1, jogador2, &window);
+  interface->drawInterface(jogador1, jogador2, &window);
   jogador1->animacaoPersonagem();
   jogador2->animacaoPersonagem();
   window.draw(jogador1->getSprite());

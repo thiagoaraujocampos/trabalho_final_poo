@@ -30,33 +30,38 @@ bool Jogador::carregaArquivos() {
 
 void Jogador::move() {
 
+  bool moveCima = y > -11;
+  bool moveBaixo = y < HEIGHT;
+  bool moveEsquerda = x > 200;
+  bool moveDireita = x < WIDTH;
+
   if (selecao == 1) {
-    if (Keyboard::isKeyPressed(Keyboard::D)) {
+    if (Keyboard::isKeyPressed(Keyboard::D) && moveDireita) {
       x += 0.5;
       lado_atual = 0;
-    } else if (Keyboard::isKeyPressed(Keyboard::A)) {
+    } else if (Keyboard::isKeyPressed(Keyboard::A) && moveEsquerda) {
       x -= 0.5;
       lado_atual = 1;
-    } else if (Keyboard::isKeyPressed(Keyboard::W)) {
+    } else if (Keyboard::isKeyPressed(Keyboard::W) && moveCima) {
       y -= 0.5;
       lado_atual = 2;
-    } else if (Keyboard::isKeyPressed(Keyboard::S)) {
+    } else if (Keyboard::isKeyPressed(Keyboard::S) && moveBaixo) {
       y += 0.5;
       lado_atual = 3;
     } else {
       lado_atual = 4;
     }
   } else if (selecao == 2) {
-    if (Keyboard::isKeyPressed(Keyboard::Right)) {
+    if (Keyboard::isKeyPressed(Keyboard::Right) && moveDireita) {
       x += 0.5;
       lado_atual = 0;
-    } else if (Keyboard::isKeyPressed(Keyboard::Left)) {
+    } else if (Keyboard::isKeyPressed(Keyboard::Left) && moveEsquerda) {
       x -= 0.5;
       lado_atual = 1;
-    } else if (Keyboard::isKeyPressed(Keyboard::Up)) {
+    } else if (Keyboard::isKeyPressed(Keyboard::Up) && moveCima) {
       y -= 0.5;
       lado_atual = 2;
-    } else if (Keyboard::isKeyPressed(Keyboard::Down)) {
+    } else if (Keyboard::isKeyPressed(Keyboard::Down) && moveBaixo) {
       y += 0.5;
       lado_atual = 3;
     } else {
