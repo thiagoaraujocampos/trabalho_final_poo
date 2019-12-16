@@ -86,7 +86,7 @@ int Jogo::getEstado() { return estado_atual; }
 void Jogo::setEstado(int estado) { estado_atual = estado; }
 
 void Jogo::temporizador() {
-  if (clockJogo.getElapsedTime().asSeconds() > 5.0f && estado_atual == JOGO) {
+  if (clockJogo.getElapsedTime().asSeconds() > 45.0f && estado_atual == JOGO) {
     if (jogador1->getPontos() > jogador2->getPontos()) {
       resultado->carrega(1);
       BinaryFile bf("info.dat");
