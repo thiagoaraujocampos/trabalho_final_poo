@@ -15,9 +15,9 @@ int main(){
                 break;
             }
         }
-        window.clear();
-        menu.atualizaText(window);
+        window.clear();        
         menu.draw(window);
+        menu.atualizaText(window);
         window.display();
     }
 }

@@ -13,7 +13,7 @@ Score::Score(float width, float height){
         //erro
     }
 
-    Sprite fundo(background);
+    fundo.setTexture(background);
     
     nome.setPosition(100,200);
     nome.setFont(fonte);
@@ -45,7 +45,7 @@ Score::~Score(){
 }
 
 void Score::draw(sf::RenderWindow &window){
-    window.draw(background);
+    window.draw(fundo);
     window.draw(nome);
     window.draw(pontos);
 }

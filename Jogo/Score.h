@@ -15,8 +15,7 @@ class Score
         Score(float width, float height);
         virtual ~Score();        
         void draw(sf::RenderWindow &window);
-
-        void atualizaText(RenderWindow &window);
+        void atualizaText(RenderWindow &window);        
         
     private:
         Font fonte;
@@ -25,6 +24,7 @@ class Score
         Text nomeJogador;
         Text pontosJogador;
         vector<Pontos> ponto;
+        Sprite fundo;
         Texture background;
         void buscaRanking();
 };
