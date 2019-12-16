@@ -24,7 +24,7 @@ void Interface::drawInterface(Jogador *jogador1, Jogador *jogador2, RenderWindow
     ponto1.setPosition(85, 365);
     ponto2.setPosition(85, 730);
     ponto1.setString(to_string(jogador1->getPontos()));
-    ponto2.setString(to_string(jogador1->getPontos()));
+    ponto2.setString(to_string(jogador2->getPontos()));
     window->draw(textClock);
     window->draw(ponto1);
     window->draw(ponto2);
