@@ -3,6 +3,6 @@
 
 #define WIDTH 1000
 #define HEIGHT 800
-#define NOME "nome"
+#define NOME "ChernoColor"
 
 #endif

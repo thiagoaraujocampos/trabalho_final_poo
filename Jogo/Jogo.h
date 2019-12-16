@@ -4,6 +4,7 @@
 #include "Jogador.h"
 #include "Mapa.h"
 #include "Interface.h"
+#include "Inicio.h"
 
 #include <iostream>
 #include <SFML/Audio.hpp>
@@ -19,7 +20,10 @@ public:
   virtual ~Jogo();
   void run();
 
-  static const int MENU = 1;
+  int getEstado();
+  void setEstado(int estado);
+
+  static const int INICIO = 1;
   static const int JOGO = 2;
   static const int RANKING = 3;
 
@@ -30,6 +34,7 @@ private:
   Jogador *jogador2;
   Mapa *mapa;
   Interface *interface;
+  Inicio *inicio;
   Clock clockJogo;
   void eventos();
   void update();

@@ -28,12 +28,14 @@ void Mapa::geraMapa(Jogador *jogador1, Jogador *jogador2, RenderWindow *window) 
 
       if (jogador1->getX() + 25 > posx && jogador1->getX() + 25 <= posx + 40 && jogador1->getY() + 45 > posy && jogador1->getY() + 45 <= posy + 40) {
         if (matriz[i][j] != 1) jogador1->setPontos(jogador1->getPontos()+1);
+        if (matriz[i][j] == 2) jogador2->setPontos(jogador2->getPontos()-1);
         matriz[i][j] = 1;
         quadrado[i][j].setFillColor(color1);
       }
       
       if (jogador2->getX() + 25 > posx && jogador2->getX() + 25 <= posx + 40 && jogador2->getY() + 45 > posy && jogador2->getY() + 45 <= posy + 40) {
         if (matriz[i][j] != 2) jogador2->setPontos(jogador2->getPontos()+1);
+        if (matriz[i][j] == 1) jogador1->setPontos(jogador1->getPontos()-1);
         matriz[i][j] = 2;
         quadrado[i][j].setFillColor(color2);
       }
