@@ -99,6 +99,7 @@ void Jogo::temporizador() {
       resultado->carrega(0);
     }
     restartAll();
+    ranking->buscaRanking();
     estado_atual = RESULTADO;
   }
 }
