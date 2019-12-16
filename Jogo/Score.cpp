@@ -15,25 +15,13 @@ Score::Score(float width, float height){
 
     fundo.setTexture(background);
     
-    nome.setPosition(100,200);
-    nome.setFont(fonte);
-    nome.setString("Nome");
-    nome.setCharacterSize(50);
-    nome.setFillColor(Color::Green);
-    
-    pontos.setPosition(700, 200);
+    pontos.setPosition(260, 200);
     pontos.setFont(fonte);
     pontos.setCharacterSize(50);
-    pontos.setString("Pontos");
+    pontos.setString("Maiores Pontuacoes");
     pontos.setFillColor(Color::Green);
     
-    nomeJogador.setPosition(100,300);
-    nomeJogador.setFont(fonte);
-    nomeJogador.setString("Nome");
-    nomeJogador.setCharacterSize(30);
-    nomeJogador.setFillColor(Color::Yellow);
-    
-    pontosJogador.setPosition(700, 300);
+    pontosJogador.setPosition(320, 300);
     pontosJogador.setFont(fonte);
     pontosJogador.setCharacterSize(30);
     pontosJogador.setString("Pontos");
@@ -53,10 +41,8 @@ void Score::draw(sf::RenderWindow &window){
 void Score::atualizaText(RenderWindow &window){
     int y = 300;
     for(int i = 0; i < ponto.size() && i < 10; i++) {
-      nomeJogador.setString(to_string(ponto[i].getRA()));
-      nomeJogador.setPosition(100,y);
       pontosJogador.setString(to_string(ponto[i].getPont()));
-      pontosJogador.setPosition(700,y);
+      pontosJogador.setPosition(450,y);
       window.draw(nomeJogador);
       window.draw(pontosJogador);
       y += 40;
