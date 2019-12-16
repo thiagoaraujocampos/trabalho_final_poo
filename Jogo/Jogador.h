@@ -21,7 +21,9 @@ public:
   void animacaoPersonagem();
   void setSelecao(int selecao);
   int getX();
+  void setX(int x);
   int getY();
+  void setY(int y);
   int getPontos();
   void setPontos(int pontos);
   Sprite getSprite();

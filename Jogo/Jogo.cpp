@@ -35,10 +35,15 @@ void Jogo::eventos() {
       window.close();
     if (event.type == Event::EventType::KeyPressed) {
       if (event.key.code == Keyboard::Escape) {
-        if(estado_atual == 3 || estado_atual == 2) estado_atual = 1;
-        else window.close();
+        if (estado_atual == RANKING || estado_atual == JOGO) {
+          estado_atual = INICIO;
+        } else if (estado_atual == RESULTADO) {
+            estado_atual = RANKING;
+        } else {
+          window.close();
+        }
       }
-      if(estado_atual == INICIO) 
+      if (estado_atual == INICIO)
         inicio->eventos(event, window, &estado_atual, &clockJogo);
     }
   }
@@ -52,7 +57,6 @@ void Jogo::update() {
     jogador2->move();
     temporizador();
   } else if (estado_atual == RESULTADO) {
-
   }
 }
 
@@ -62,7 +66,6 @@ void Jogo::render() {
     window.draw(inicio->getBackground());
     window.draw(inicio->getRectangle());
   } else if (estado_atual == JOGO) {
-
     mapa->geraMapa(jogador1, jogador2, &window);
     interface->drawInterface(jogador1, jogador2, &window);
     jogador1->animacaoPersonagem();
@@ -78,23 +81,34 @@ void Jogo::render() {
   window.display();
 }
 
-int Jogo::getEstado() {
-  return estado_atual;
-}
+int Jogo::getEstado() { return estado_atual; }
 
-void Jogo::setEstado(int estado) {
-  estado_atual = estado;
-}
+void Jogo::setEstado(int estado) { estado_atual = estado; }
 
 void Jogo::temporizador() {
   if (clockJogo.getElapsedTime().asSeconds() > 5.0f && estado_atual == JOGO) {
-    if(jogador1->getPontos() > jogador2->getPontos()){
+    if (jogador1->getPontos() > jogador2->getPontos()) {
       resultado->carrega(1);
-    } if(jogador1->getPontos() < jogador2->getPontos()) {
+      BinaryFile bf("info.dat");
+      bf.grava(1111, jogador1->getPontos());
+    } else if (jogador1->getPontos() < jogador2->getPontos()) {
       resultado->carrega(2);
+      BinaryFile bf("info.dat");
+      bf.grava(1111, jogador2->getPontos());
     } else {
       resultado->carrega(0);
     }
+    restartAll();
     estado_atual = RESULTADO;
   }
+}
+
+void Jogo::restartAll() {
+  jogador1->setPontos(0);
+  jogador1->setX(WIDTH-800);
+  jogador1->setY(-10);
+  jogador2->setPontos(0);
+  jogador2->setX(WIDTH - 50);
+  jogador2->setY(HEIGHT - 50);
+  mapa->carrega();
 }

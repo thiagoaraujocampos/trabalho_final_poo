@@ -2,8 +2,13 @@
 
 Jogador::Jogador(int selecao) : selecao(selecao) {
   carregaArquivos();
-  if(selecao == 1) { this->x = WIDTH-800; this->y = -10; }
-  else if(selecao == 2) { this->x = WIDTH-50; this->y = HEIGHT-50; }
+  if (selecao == 1) {
+    this->x = WIDTH - 800;
+    this->y = -10;
+  } else if (selecao == 2) {
+    this->x = WIDTH - 50;
+    this->y = HEIGHT - 50;
+  }
 }
 
 Jogador::~Jogador() {}
@@ -88,9 +93,13 @@ void Jogador::setSelecao(int selecao) { this->selecao = selecao; }
 
 int Jogador::getX() { return x; }
 
+void Jogador::setX(int x) { this->x = x; }
+
 int Jogador::getY() { return y; }
 
-int Jogador::getPontos() { return pontos; }
+void Jogador::setY(int y) { this->y = y; }
+
+int Jogador::getPontos() { return this->pontos; }
 
 void Jogador::setPontos(int pontos) { this->pontos = pontos; }
 

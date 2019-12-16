@@ -22,6 +22,7 @@ public:
   virtual ~Jogo();
   void run();
   void temporizador();
+  void restartAll();
 
   int getEstado();
   void setEstado(int estado);
