@@ -36,9 +36,9 @@ bool Jogador::carregaArquivos() {
 void Jogador::move() {
 
   bool moveCima = y > -11;
-  bool moveBaixo = y < HEIGHT;
+  bool moveBaixo = y < HEIGHT-45;
   bool moveEsquerda = x > 200;
-  bool moveDireita = x < WIDTH;
+  bool moveDireita = x < WIDTH-35;
 
   if (selecao == 1) {
     if (Keyboard::isKeyPressed(Keyboard::D) && moveDireita) {

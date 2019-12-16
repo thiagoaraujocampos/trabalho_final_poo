@@ -19,25 +19,25 @@ Score::Score(float width, float height){
     nome.setFont(fonte);
     nome.setString("Nome");
     nome.setCharacterSize(50);
-    nome.setColor(Color::Green);
+    nome.setFillColor(Color::Green);
     
     pontos.setPosition(700, 200);
     pontos.setFont(fonte);
     pontos.setCharacterSize(50);
     pontos.setString("Pontos");
-    pontos.setColor(Color::Green);
+    pontos.setFillColor(Color::Green);
     
     nomeJogador.setPosition(100,300);
     nomeJogador.setFont(fonte);
     nomeJogador.setString("Nome");
     nomeJogador.setCharacterSize(30);
-    nomeJogador.setColor(Color::Yellow);
+    nomeJogador.setFillColor(Color::Yellow);
     
     pontosJogador.setPosition(700, 300);
     pontosJogador.setFont(fonte);
     pontosJogador.setCharacterSize(30);
     pontosJogador.setString("Pontos");
-    pontosJogador.setColor(Color::Yellow);
+    pontosJogador.setFillColor(Color::Yellow);
 }
 
 Score::~Score(){
