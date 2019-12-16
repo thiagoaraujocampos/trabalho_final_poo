@@ -16,7 +16,7 @@ class Score
         virtual ~Score();        
         void draw(sf::RenderWindow &window);
         void atualizaText(RenderWindow &window);        
-        
+        void buscaRanking();
     private:
         Font fonte;
         Text nome;
@@ -26,7 +26,6 @@ class Score
         vector<Pontos> ponto;
         Sprite fundo;
         Texture background;
-        void buscaRanking();
 };
 
 #endif
