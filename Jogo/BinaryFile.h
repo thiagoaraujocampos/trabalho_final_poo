@@ -13,11 +13,10 @@ public:
     BinaryFile(string arquivo);
     virtual ~BinaryFile();
     void grava(int RA, int pontuacao);
-    void leitura();
+    void leitura(vector<Pontos>& pont);
     void imprimeOrdenado();
 private:
     string arquivo;
-    void leitura(vector<Pontos>&);
 };
 
 #endif /* BINARYFILE_H */
